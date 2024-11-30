@@ -1,0 +1,250 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    /* Offset the height of the fixed header */
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 123, 255, 0.9);
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+    top: 0;
+    /* Ensure nav is fixed at the top */
+    z-index: 1000;
+    /* Keep nav above other content */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 20px;
+    padding-right: 50px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s, background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    padding: 80px 100px;
+}
+
+section h1,
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background: #fff;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+    background: #007BFF;
+    color: #fff;
+}
+
+/* Project Cards */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project-card {
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.project-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #003F7F;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+/* Logo */
+.logo {
+    float: left;
+    margin-left: 50px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Clearfix for nav */
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Home Section Button */
+#home button {
+    margin-top: 30px;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-content img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    /* ...existing media queries... */
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;
+    }
+}
