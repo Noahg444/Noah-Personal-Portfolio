@@ -7,24 +7,29 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to bottom right, #007BFF, #00C6FF);
-    color: #fff;
+    background: #f0f0f0;
+    /* Light grey background */
+    color: #333;
+    /* Dark text color */
     margin: 0;
     padding: 0;
-    padding-top: 60px;
-    /* Offset the height of the fixed header */
+    padding-top: 0;
+    /* Remove the padding-top */
 }
 
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(0, 123, 255, 0.9);
+    background: #007BFF;
+    /* Blue background */
     padding: 10px 0;
     backdrop-filter: blur(10px);
     top: 0;
     /* Ensure nav is fixed at the top */
     z-index: 1000;
     /* Keep nav above other content */
+    height: 60px;
+    /* Set a fixed height for nav */
 }
 
 nav ul {
@@ -74,8 +79,10 @@ section p {
 /* Buttons */
 button {
     padding: 10px 20px;
-    background: #fff;
-    color: #007BFF;
+    background: #007BFF;
+    /* Blue background */
+    color: #fff;
+    /* White text */
     border: 2px solid #007BFF;
     border-radius: 5px;
     cursor: pointer;
@@ -83,7 +90,8 @@ button {
 }
 
 button:hover {
-    background: #007BFF;
+    background: #0056b3;
+    /* Darker blue on hover */
     color: #fff;
 }
 
@@ -96,7 +104,7 @@ button:hover {
 }
 
 .project-card {
-    background: #fff;
+    background: #f0f0f0;
     color: #333;
     border-radius: 10px;
     padding: 20px;
@@ -161,8 +169,8 @@ form button {
 
 /* Footer */
 footer {
-    background: #003F7F;
-    color: #fff;
+    background: #f0f0f0;
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
@@ -247,4 +255,9 @@ nav::after {
         margin-left: 0;
         text-align: center;
     }
+}
+
+#home {
+    margin-top: 60px;
+    /* Push the home section below the navbar */
 }
