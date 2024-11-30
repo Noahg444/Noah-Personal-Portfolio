@@ -1,4 +1,4 @@
-/* Reset default browser styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,41 +8,31 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f0f0f0;
-    /* Light grey background */
     color: #333;
-    /* Dark text color */
-    margin: 0;
-    padding: 0;
     padding-top: 0;
-    /* Remove the padding-top */
 }
 
+/* Navigation */
 nav {
     position: fixed;
+    top: 0;
+    z-index: 1000;
     width: 100%;
+    height: 60px;
     background: #007BFF;
-    /* Blue background */
     padding: 10px 0;
     backdrop-filter: blur(10px);
-    top: 0;
-    /* Ensure nav is fixed at the top */
-    z-index: 1000;
-    /* Keep nav above other content */
-    height: 60px;
-    /* Set a fixed height for nav */
-}
-
-nav ul {
-    list-style: none;
     display: flex;
-    justify-content: flex-end;
-
-    gap: 20px;
-    padding-right: 50px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav li {
+.nav-links {
+    display: flex;
     list-style: none;
+    justify-content: center;
+    gap: 20px;
+    /* Removed unnecessary padding */
 }
 
 nav a {
@@ -58,6 +48,34 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.menu-icon .line.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon .line.open:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon .line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Sections */
 section {
     padding: 80px 100px;
@@ -71,7 +89,7 @@ section h2 {
 
 section p {
     max-width: 800px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     line-height: 1.8;
     font-size: 18px;
 }
@@ -80,9 +98,7 @@ section p {
 button {
     padding: 10px 20px;
     background: #007BFF;
-    /* Blue background */
     color: #fff;
-    /* White text */
     border: 2px solid #007BFF;
     border-radius: 5px;
     cursor: pointer;
@@ -91,16 +107,15 @@ button {
 
 button:hover {
     background: #0056b3;
-    /* Darker blue on hover */
-    color: #fff;
 }
 
-/* Project Cards */
+/* Project List */
 .project-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -135,7 +150,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Contact Form */
+/* Forms */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -179,16 +194,36 @@ footer p {
     margin: 0;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        padding-right: 0;
+    .menu-icon {
+        display: flex;
     }
 
-    nav li {
-        margin-bottom: 10px;
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #007BFF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
     }
 
     section {
@@ -205,27 +240,18 @@ footer p {
     }
 }
 
-/* Logo */
-.logo {
-    float: left;
-    margin-left: 50px;
-}
-
-.logo a {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Clearfix for nav */
+/* Clearfix */
 nav::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Home Section Button */
+/* Home Section */
+#home {
+    margin-top: 60px;
+}
+
 #home button {
     margin-top: 30px;
 }
@@ -236,28 +262,72 @@ nav::after {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Skills Section */
+.skills {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skills h2 {
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    list-style: none;
+    background: #6c757d;
+    /* Less prominent color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Interests Section */
+.interests {
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.interests h2 {
+    margin-bottom: 20px;
+}
+
+.interests p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.skills {
+    flex: 1;
+}
+
+.interests {
+    flex: 2;
 }
 
 .about-content img {
     border-radius: 50%;
     width: 200px;
     height: 200px;
-}
-
-@media (max-width: 768px) {
-    /* ...existing media queries... */
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .logo {
-        margin-left: 0;
-        text-align: center;
-    }
-}
-
-#home {
-    margin-top: 60px;
-    /* Push the home section below the navbar */
 }
