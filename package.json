@@ -12,14 +12,15 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Noahg444.github.io/portfolio-website",
+  "homepage": "https://www.noah-greenbaum.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "create-cname": "echo 'www.noah-greenbaum.com' > public/CNAME"
   },
   "eslintConfig": {
     "extends": [
