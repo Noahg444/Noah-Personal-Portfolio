@@ -10,10 +10,24 @@ const Home = () => {
                     <h2>Skills</h2>
                     <ul className="skills-list">
                         <li>JavaScript</li>
+                        <li>JQuery</li>
                         <li>React</li>
                         <li>Node.js</li>
                         <li>Python</li>
                         <li>Docker</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Java</li>
+                        <li>Cloud Services</li>
+                        <li>Agile Methodologies</li>
+                        <li>UI/UX Design</li>
+                        <li>REST APIs</li>
+                        <li>Version Control</li>
+                        <li>Linux Administration</li>
+                        <li>Database Management</li>
+                        <li>Relational Database</li>
+                        <li>NoSQL Database</li>
+                        <li>Non-relational Database</li>
                     </ul>
                 </div>
 

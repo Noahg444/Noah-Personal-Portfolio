@@ -299,12 +299,13 @@ nav::after {
 /* Interests Section */
 .interests {
     margin-top: 40px;
-    text-align: center;
+    text-align: left;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
     flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .interests h2 {
