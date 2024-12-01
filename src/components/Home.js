@@ -20,9 +20,9 @@ const Home = () => {
                 <div className="interests">
                     <h2>Interests</h2>
                     <p>
-                        I am passionate about full-stack development, cloud computing, and cybersecurity.
-                        I enjoy building scalable web applications, exploring cloud services, and ensuring
-                        the security of applications and data.
+                        My motivation for pursuing computer science stems from the ability to develop practical solutions to complex challenges.
+                        I am particularly interested in enhancing privacy, optimizing system workflows, and building scalable technologies that
+                        address real-world needs. My passion lies in bridging the gap between innovative ideas and their effective implementation.
                     </p>
                     <button onClick={() => window.location.href = '#projects'}>View My Work</button>
                 </div>
