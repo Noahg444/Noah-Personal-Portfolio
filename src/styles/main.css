@@ -7,8 +7,10 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f0f0;
-    color: #333;
+    background: #333333;
+    /* Dark grey background */
+    color: #ffffff;
+    /* White text */
     padding-top: 0;
 }
 
@@ -19,7 +21,8 @@ nav {
     z-index: 1000;
     width: 100%;
     height: 60px;
-    background: #007BFF;
+    background: #ADD8E6;
+    /* Light blue */
     padding: 10px 0;
     backdrop-filter: blur(10px);
     display: flex;
@@ -36,7 +39,8 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #333333;
+    /* Dark grey text for contrast */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -44,7 +48,9 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #387dc3;
+    color: #ffffff;
+    /* Optional: Ensure text color contrasts with background */
     border-radius: 5px;
 }
 
@@ -97,16 +103,20 @@ section p {
 /* Buttons */
 button {
     padding: 10px 20px;
-    background: #007BFF;
-    color: #fff;
-    border: 2px solid #007BFF;
+    background: #ADD8E6;
+    /* Light blue */
+    color: #333333;
+    /* Dark grey text */
+    border: 2px solid #ADD8E6;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #387dc3;
+    color: #ffffff;
+    /* Optional: Ensure text color contrasts with background */
 }
 
 /* Project List */
@@ -141,13 +151,14 @@ button:hover {
 }
 
 .project-card a {
-    color: #007BFF;
+    color: #ADD8E6;
+    /* Light blue */
     text-decoration: none;
     font-weight: bold;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
+    color: #387dc3;
 }
 
 /* Forms */
