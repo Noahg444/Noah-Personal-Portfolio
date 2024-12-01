@@ -256,6 +256,22 @@ nav::after {
     margin-top: 30px;
 }
 
+.home-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.home-content h1 {
+    font-weight: normal;
+}
+
+.home-content h1 strong {
+    font-weight: bold;
+}
+
+
 /* About Section */
 .about-content {
     display: flex;
@@ -263,6 +279,7 @@ nav::after {
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 /* Skills Section */
@@ -295,6 +312,11 @@ nav::after {
     border-radius: 5px;
     font-size: 15px;
 }
+
+.skills-list li:hover {
+    background: #387dc3;
+}
+
 
 /* Interests Section */
 .interests {

@@ -4,7 +4,9 @@ import './../styles/main.css';
 const Home = () => {
     return (
         <section id="home">
-            <h1>Noah Greenbaum</h1>
+            <div className='home-content'>
+                <h1>Hi, My Name <br></br> Is <strong>Noah</strong></h1>
+            </div>
             <div className="about-content">
                 <div className="skills">
                     <h2>Skills</h2>
