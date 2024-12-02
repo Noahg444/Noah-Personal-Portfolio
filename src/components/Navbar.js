@@ -9,6 +9,7 @@ const Navbar = () => {
 
     return (
         <nav>
+            <div className="navbar-brand">Noah Greenbaum</div>
             <div className="menu-icon" onClick={handleMenuToggle}>
                 <div className={menuOpen ? 'line open' : 'line'}></div>
                 <div className={menuOpen ? 'line open' : 'line'}></div>

@@ -30,12 +30,21 @@ nav {
     justify-content: space-between;
 }
 
+.navbar-brand {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #333333;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     justify-content: center;
     gap: 20px;
     /* Removed unnecessary padding */
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 nav a {
@@ -269,19 +278,21 @@ nav::after {
 
 .home-content {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.home-content h1 {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
     font-weight: normal;
 }
 
-.home-content h1 strong {
-    font-weight: bold;
+.home-content h1 {
+    display: block;
+    margin: 0;
 }
 
+.home-content .home-content-name {
+    font-size: 40px;
+    font-weight: bold;
+}
 
 /* About Section */
 .about-content {
@@ -328,7 +339,6 @@ nav::after {
     background: #387dc3;
 }
 
-
 /* Interests Section */
 .interests {
     margin-top: 40px;
@@ -372,4 +382,31 @@ nav::after {
     height: auto;
     display: block;
     margin: 0 auto 20px;
+}
+
+/* Add styles for the moving "Hi There!" message */
+#hi-there {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.hi-there {
+    font-size: 48px;
+    color: #ff5733;
+    text-align: center;
+    margin-bottom: 20px;
+    /* You can add more styles to enhance visibility */
 }
