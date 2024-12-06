@@ -9,7 +9,7 @@ const Projects = () => {
                 <div className="project-card">
                     <h3>Project One</h3>
                     <p>A brief description of Project One highlighting key features and technologies used.</p>
-                    <a href="https://github.com/yourusername/project-one" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    <a href="https://github.com/Noahg444/Maui-.NET-DontExpire" target="_blank" rel="DontExpire Project">View on GitHub</a>
                 </div>
                 <div className="project-card">
                     <h3>Project Two</h3>
