@@ -7,14 +7,21 @@ const Projects = () => {
             <h2>My Projects</h2>
             <div className="project-list">
                 <div className="project-card">
-                    <h3>Project One</h3>
-                    <p>This is an application to track food that has entered the fridge. The motivation behind the application was to reduce the amount of waste created from house mates storing food in the back of the fridge and forgetting about it. The technologies used in this were MySQL and MAUI .NET using XAML</p>
+                    <h3>Food Expiration Tracker</h3>
+                    <p>This is an application to track food that has entered the fridge. The motivation behind the application was to reduce the amount
+                        of waste created from house mates storing food in the back of the fridge and forgetting about it. The technologies used in this
+                        were SQLite, XAML, and C#
+                    </p>
                     <a href="https://github.com/Noahg444/Maui-.NET-DontExpire" target="_blank" rel="DontExpire Project">View on GitHub</a>
                 </div>
                 <div className="project-card">
-                    <h3>Project Two</h3>
-                    <p>A brief description of Project Two highlighting key features and technologies used.</p>
-                    <a href="https://github.com/yourusername/project-two" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    <h3>2016 Summer Olympics Explorer</h3>
+                    <p>
+                        This application is a C# Maui application built with XAML that allows users to explore detailed information about the
+                        2016 Summer Olympics. It features interactive ListViews for countries, sports, events, and athletes—with medal highlights—and
+                        provides pop-up details for individual athletes. Efficiently managing data through an embedded TSV file and SQLite ensures fast performance after the initial setup.
+                    </p>
+                    <a href="https://github.com/Noahg444/2016-Summer-Olympics-Explorer-MAUI-.NET" target="_blank" rel="2016 Summer Olympics Explorer">View on GitHub</a>
                 </div>
                 {/* ...add more project cards as needed... */}
             </div>
