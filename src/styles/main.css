@@ -259,8 +259,31 @@ footer p {
         align-items: center;
     }
 
-    .project-card {
+    /* Stack .about-content vertically */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Stack .home-content vertically */
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    /* Ensure .skills and .interests take full width */
+    .skills,
+    .interests {
         width: 100%;
+    }
+
+    /* Stack skills and interests vertically */
+    .about-content .skills,
+    .about-content .interests {
+        margin-top: 20px;
     }
 }
 
