@@ -1,6 +1,6 @@
 import React from 'react';
 import './../styles/main.css';
-import DuffyPaintImage from './../images/DuffyPaint.png'; // Import the image
+import DuffyPaintImage from './../images/DuffyPaint.png';
 
 const Projects = () => {
     return (
