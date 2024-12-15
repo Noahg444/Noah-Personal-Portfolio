@@ -33,7 +33,15 @@ const Projects = () => {
                     </p>
                     <a href="https://duffypaint.com" target="_blank" rel="noreferrer" className="projectLink">Visit Website</a>
                 </div>
-                {/* ...add more project cards as needed... */}
+                <div className="project-card">
+                    <h3>MineSweeper</h3>
+                    <p>
+                        This is an implementation of MineSweeper game using MVC architecture in Python. The game can be played in the console and has a simple interface or in
+                        GUI mode using the Pygame library. Beyond normal functionality of minesweeper, there is a treasure icon which ends the game in a user win. The game also
+                        has a test board loading option allowing the user to test knowing the game board layout. The technologies used in the project were Python3.
+                    </p>
+                    <a href="https://github.com/Noahg444/MineSweeper" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
+                </div>
             </div>
         </section>
     );
