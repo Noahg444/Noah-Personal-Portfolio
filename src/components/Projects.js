@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './../styles/main.css';
 import DuffyPaintImage from './../images/DuffyPaint.png';
+import RemoteSensingPDF from './../projects/Remote_Sensing_Final_Project.pdf';
 
 const Projects = () => {
+    const [showPopup, setShowPopup] = useState(false);
+
     return (
         <section id="projects">
             <h2>My Projects</h2>
@@ -42,7 +45,35 @@ const Projects = () => {
                     </p>
                     <a href="https://github.com/Noahg444/MineSweeper" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
                 </div>
+                <div className="project-card">
+                    <h3>Urban Head Islands in Ohio</h3>
+                    <p>
+                        This project was a final project for a remote sensing class. The project was to identify urban heat islands in Ohio using remote sensing data. The project
+                        used Landsat 8 data to identify the urban heat islands using thresholding, kmeans clustering, and random forest. The project was done in a group of 3 people.
+                        Technologies used we EarthExplorer, Python3, and QGIS. 
+                    </p>
+                    <button onClick={() => setShowPopup(true)}>View Presentation and Paper</button>
+                </div>
             </div>
+            {showPopup && (
+                <div className="popup">
+                    <div className="popup-content">
+                        <iframe
+                            class="presentation"
+                            src="https://docs.google.com/presentation/d/1fEjI35ylNH1P1dF69l99cw1Ja6P9rBWc/embed" 
+                            width="100%"
+                            >
+                        </iframe>
+                        <iframe 
+                            src={RemoteSensingPDF} 
+                            title="Paper" 
+                            width="100%" 
+                            height="1000px"
+                        ></iframe>
+                        <button onClick={() => setShowPopup(false)}>Close</button>
+                    </div>
+                </div>
+            )}
         </section>
     );
 };

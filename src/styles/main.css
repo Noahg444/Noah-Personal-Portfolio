@@ -14,6 +14,14 @@ body {
     padding-top: 0;
 }
 
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    text-align: center;
+}
+
 /* Navigation */
 nav {
     position: fixed;
