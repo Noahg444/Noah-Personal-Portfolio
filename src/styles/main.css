@@ -20,7 +20,6 @@ body {
     text-align: center;
 }
 
-/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -28,7 +27,6 @@ nav {
     width: 100%;
     height: 60px;
     background: #ADD8E6;
-    /* Light blue */
     padding: 10px 0;
     backdrop-filter: blur(10px);
     display: flex;
@@ -48,14 +46,12 @@ nav {
     list-style: none;
     justify-content: center;
     gap: 20px;
-    /* Removed unnecessary padding */
     margin-left: auto;
     margin-right: 20px;
 }
 
 nav a {
     color: #333333;
-    /* Dark grey text for contrast */
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
@@ -65,11 +61,9 @@ nav a {
 nav a:hover {
     background: #387dc3;
     color: #ffffff;
-    /* Optional: Ensure text color contrasts with background */
     border-radius: 5px;
 }
 
-/* Menu Icon */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -97,7 +91,6 @@ nav a:hover {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Sections */
 section {
     padding: 80px 100px;
 }
@@ -115,13 +108,10 @@ section p {
     font-size: 18px;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     background: #ADD8E6;
-    /* Light blue */
     color: #333333;
-    /* Dark grey text */
     border: 2px solid #ADD8E6;
     border-radius: 5px;
     cursor: pointer;
@@ -131,10 +121,8 @@ button {
 button:hover {
     background: #387dc3;
     color: #ffffff;
-    /* Optional: Ensure text color contrasts with background */
 }
 
-/* Project List */
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -171,7 +159,6 @@ button:hover {
 
 .project-card a {
     color: #ADD8E6;
-    /* Light blue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -180,7 +167,6 @@ button:hover {
     color: #387dc3;
 }
 
-/* Forms */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -212,7 +198,6 @@ form button {
     width: 100%;
 }
 
-/* Footer */
 footer {
     background: #f0f0f0;
     color: #333;
@@ -224,7 +209,6 @@ footer p {
     margin: 0;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .menu-icon {
         display: flex;
@@ -265,14 +249,12 @@ footer p {
         align-items: center;
     }
 
-    /* Stack .about-content vertically */
     .about-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    /* Stack .home-content vertically */
     .home-content {
         flex-direction: column;
         align-items: center;
@@ -280,27 +262,23 @@ footer p {
         font-weight: normal;
     }
 
-    /* Ensure .skills and .interests take full width */
     .skills,
     .interests {
         width: 100%;
     }
 
-    /* Stack skills and interests vertically */
     .about-content .skills,
     .about-content .interests {
         margin-top: 20px;
     }
 }
 
-/* Clearfix */
 nav::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Home Section */
 #home {
     margin-top: 60px;
 }
@@ -327,7 +305,6 @@ nav::after {
     font-weight: bold;
 }
 
-/* About Section */
 .about-content {
     display: flex;
     align-items: center;
@@ -337,7 +314,6 @@ nav::after {
     text-align: left;
 }
 
-/* Skills Section */
 .skills {
     margin-top: 40px;
     text-align: center;
@@ -372,7 +348,6 @@ nav::after {
     background: #387dc3;
 }
 
-/* Interests Section */
 .interests {
     margin-top: 40px;
     text-align: left;
@@ -411,7 +386,6 @@ nav::after {
 
 .about-image {
     width: 300px;
-    /* Adjust the size as needed */
     height: auto;
     display: block;
     margin: 0 auto 20px;
@@ -423,7 +397,6 @@ nav::after {
     color: #ff5733;
     text-align: center;
     margin-bottom: 20px;
-    /* You can add more styles to enhance visibility */
 }
 
 .projectLink {
@@ -472,4 +445,93 @@ nav::after {
 .resume-full-iframe {
     width: 100%;
     height: 600px;
+}
+
+body.popup-open {
+    overflow: hidden;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.iframe-container {
+    flex: 1;
+    overflow: auto;
+}
+
+.presentation-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.paper-iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.close-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    .presentation-iframe, .paper-iframe {
+        height: 300px;
+    }
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-group button {
+    padding: 10px 15px;
+    background-color: #ADD8E6;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #87CEFA;
 }
