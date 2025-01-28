@@ -7,6 +7,10 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const handleLinkClick = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <nav>
             <div className="navbar-brand">Noah Greenbaum</div>
@@ -16,10 +20,10 @@ const Navbar = () => {
                 <div className={menuOpen ? 'line open' : 'line'}></div>
             </div>
             <ul className={menuOpen ? 'nav-links open' : 'nav-links'}>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onClick={handleLinkClick}>Home</a></li>
+                <li><a href="#projects" onClick={handleLinkClick}>Projects</a></li>
+                <li><a href="#about" onClick={handleLinkClick}>About</a></li>
+                <li><a href="#resume" onClick={handleLinkClick}>Resume</a></li>
             </ul>
         </nav>
     );
