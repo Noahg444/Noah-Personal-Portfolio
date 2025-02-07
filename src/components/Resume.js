@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ResumePDF from './../resume/Resume.pdf';
+import ResumePDF from './../resume/Resume2025.pdf';
 import './../styles/main.css';
 
 const Resume = () => {
