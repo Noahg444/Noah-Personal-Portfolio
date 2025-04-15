@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './../styles/main.css';
 import DuffyPaintImage from './../images/DuffyPaint.png';
+import WeatherApp from './../images/WeatherApp.png';
 import RemoteSensingPDF from './../projects/Remote_Sensing_Final_Project.pdf';
 
 const Projects = () => {
@@ -33,7 +34,8 @@ const Projects = () => {
                 
                 <div className="project-card">
                     <h3>Weather App</h3>
-                    <p>
+                    <img src={WeatherApp} alt="Weather App" />
+                    <p id='WeatherPTag'>
                     A responsive Weather App built using React that displays current weather conditions and a 30-day climatic forecast using the OpenWeatherMap API. 
                     This project showcases React component design, API integration, and responsive styling.
                     </p>

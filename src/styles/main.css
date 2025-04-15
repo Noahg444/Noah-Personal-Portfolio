@@ -359,6 +359,10 @@ nav::after {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#WeatherPTag {
+    padding: 5px 10px;
+}
+
 .interests h2 {
     margin-bottom: 20px;
 }
