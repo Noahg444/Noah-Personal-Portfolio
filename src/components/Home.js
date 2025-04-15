@@ -12,6 +12,7 @@ const Home = () => {
                     <h2>Skills</h2>
                     <ul className="skills-list">
                         <li>JavaScript</li>
+                        <li>TypeScript</li>
                         <li>JQuery</li>
                         <li>React</li>
                         <li>Node.js</li>
@@ -30,6 +31,8 @@ const Home = () => {
                         <li>Relational Database</li>
                         <li>NoSQL Database</li>
                         <li>Non-relational Database</li>
+                        <li>SQL</li>
+                        <li>Postgres</li>
                     </ul>
                 </div>
 

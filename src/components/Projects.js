@@ -32,6 +32,15 @@ const Projects = () => {
                 </div>
                 
                 <div className="project-card">
+                    <h3>Weather App</h3>
+                    <p>
+                    A responsive Weather App built using React that displays current weather conditions and a 30-day climatic forecast using the OpenWeatherMap API. 
+                    This project showcases React component design, API integration, and responsive styling.
+                    </p>
+                    <a href="https://github.com/Noahg444/weather-app" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
+                </div>
+
+                <div className="project-card">
                     <h3>Urban Heat Islands in Ohio</h3>
                     <p>
                         This project was a final project for a remote sensing class. The project was to identify urban heat islands in Ohio using remote sensing data. The project
@@ -44,7 +53,7 @@ const Projects = () => {
                     </div>
                 </div>
                 
-                <div className="project-card">
+                {/* <div className="project-card">
                     <h3>Food Expiration Tracker</h3>
                     <p>
                         This is an application to track food that has entered the fridge. The motivation behind the application was to reduce the amount
@@ -62,18 +71,20 @@ const Projects = () => {
                         provides pop-up details for individual athletes. Efficiently managing data through an embedded TSV file and SQLite ensures fast performance after the initial setup.
                     </p>
                     <a href="https://github.com/Noahg444/2016-Summer-Olympics-Explorer-MAUI-.NET" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
-                </div>
+                </div> */}
                 
+
+
                 <div className="project-card">
-                    <h3>MineSweeper</h3>
-                    <p>
-                        This is an implementation of MineSweeper game using MVC architecture in Python. The game can be played in the console and has a simple interface or in
-                        GUI mode using the Pygame library. Beyond normal functionality of minesweeper, there is a treasure icon which ends the game in a user win. The game also
-                        has a test board loading option allowing the user to test knowing the game board layout. The technologies used in the project were Python3.
-                    </p>
-                    <a href="https://github.com/Noahg444/MineSweeper" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
+                        <h3>MineSweeper</h3>
+                        <p>
+                            This is an implementation of MineSweeper game using MVC architecture in Python. The game can be played in the console and has a simple interface or in
+                            GUI mode using the Pygame library. Beyond normal functionality of minesweeper, there is a treasure icon which ends the game in a user win. The game also
+                            has a test board loading option allowing the user to test knowing the game board layout. The technologies used in the project were Python3.
+                        </p>
+                        <a href="https://github.com/Noahg444/MineSweeper" target="_blank" rel="noreferrer" className="projectLink">View on GitHub</a>
+                    </div>
                 </div>
-            </div>
             
             {activePopup && (
                 <div className="popup" onClick={() => setActivePopup(null)}>
