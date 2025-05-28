@@ -3,11 +3,12 @@ import React from 'react';
 import './../styles/main.css';
 
 const skillGroups = {
-  Languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++'],
-  Frameworks: ['React', 'Node.js', 'jQuery'],
-  Tools: ['Docker', 'Version Control', 'Linux Admin'],
-  Databases: ['Postgres', 'SQL', 'NoSQL'],
-  Methods: ['REST APIs', 'UI/UX Design', 'Agile Methodologies'],
+  Languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'HTML', 'CSS', 'PHP', 'C#', 'JSON', 'XML'],
+  Frameworks: ['React', 'Node.js', '.NET'],
+  'Cloud Platforms': ['AWS', 'Azure', 'Google Cloud'],
+  'Tools & Technologies': ['Docker', 'Git', 'Linux Administration', 'CI/CD', 'PyTorch', 'TensorFlow', 'OpenAI', 'RESTful APIs'],
+  Databases: ['Postgres', 'SQL', 'MongoDB', 'Firestore'],
+  'Communication & Collaboration': ['Agile Development', 'Story Grooming', 'Spring Planning', 'Retrospectives', 'Code Reviews'],
 };
 
 const Home = () => (
