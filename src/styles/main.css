@@ -1,5 +1,11 @@
 /* Global Styles */
-* {
+:root {
+    --accent: #007BFF;
+    /* handy if you want to reference the raw RGB later */
+    --accent-rgb: 0, 123, 255;
+  }
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +55,26 @@ nav {
     margin-left: auto;
     margin-right: 20px;
 }
+
+/* Header text & icon overrides */
+.navbar-brand {
+    color: #fff !important;
+  }
+  
+  .menu-icon .line {
+    background: #fff !important;
+  }
+  
+  /* Nav-link text (including hamburger menu items) */
+  .nav-links a {
+    color: #fff !important;
+  }
+  
+  /* Optional: make hover state a semi-transparent white */
+  .nav-links a:hover {
+    background: rgba(255,255,255,0.2) !important;
+    color: #fff !important;
+  }
 
 nav a {
     color: #333333;
@@ -287,13 +313,50 @@ nav::after {
     margin-top: 30px;
 }
 
+/* Intro styles */
 .home-content {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    font-weight: normal;
-}
+  }
+/* 1) Intro styling: two lines, second line larger + bold name */
+.intro {
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+  .intro-line1 {
+    display: block;
+    font-size: 3rem;        /* “My name” */
+    font-weight: 500;
+    color: #333;
+  }
+  .intro-line2 {
+    display: block;
+    font-size: 4rem;        /* “is Noah” */
+    font-weight: 500;
+    color: #333;
+  }
+  .intro-line2 strong {
+    font-weight: 700;       /* bold the name */
+  }
+  
+  /* 2) Skills layout: vertical by default... */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  /* ...switch to horizontal on full-width screens */
+  @media (min-width: 1024px) {
+    .skills-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
 
 .home-content h1 {
     display: block;
@@ -539,3 +602,109 @@ body.popup-open {
 .button-group button:hover {
     background-color: #87CEFA;
 }
+
+/* 1. White base + dark text */
+body {
+    background: #fff;
+    color: #333;
+  }
+  
+  /* 2. Make bubble layer sit behind everything */
+  .bubble-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* each bubble */
+  .bubble {
+    position: absolute;
+    bottom: -150px;
+    background: rgba(0, 123, 255, 0.15);
+    border-radius: 50%;
+    animation-name: rise;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  /* float up + fade */
+  @keyframes rise {
+    0%   { transform: translateY(0) scale(0.5); opacity: 0; }
+    25%  { opacity: 0.4; }
+    75%  { opacity: 0.4; }
+    100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+  }
+  
+  /* 3. Update accent color (buttons, nav hover, chips) */
+  :root {
+    --accent: #007BFF;
+  }
+  
+  /* nav background */
+  nav {
+    background: var(--accent);
+  }
+  
+  /* buttons */
+  button {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* link hover */
+  nav a:hover {
+    background: #0056b3;
+    color: #fff;
+  }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  /* At wide breakpoints, lay out side by side */
+  @media (min-width: 1024px) {
+    .skills-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+  }
+  
+  /* Category title */
+  .skills-category h3 {
+    margin-bottom: 8px;
+    color: var(--accent);
+  }
+  
+  /* Chips container */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  /* Individual chip */
+
+/* Transparent skill chips */
+.skill-chip {
+    background: rgba(var(--accent-rgb), 0.15);  /* 15% opacity blue */
+    color: var(--accent);                      /* text stays bold blue */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  
+  /* Slightly more visible on hover */
+  .skill-chip:hover {
+    background: rgba(var(--accent-rgb), 0.30);  /* bump to 30% opacity */
+  }
